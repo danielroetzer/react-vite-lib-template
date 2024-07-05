@@ -15,10 +15,7 @@ export default defineConfig({
     react(),
     dts({
       include: ['lib'],
-      exclude: [
-        '**/*.stories.ts*',
-        '**/*.test.ts*',
-      ],
+      exclude: ['**/*.stories.ts*', '**/*.test.ts*'],
     }),
   ],
   build: {
