@@ -1,11 +1,17 @@
 {
-  "name": "central-hub",
+  "name": "vite-react-typescript-component-library",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "exports": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "vite app",
+    "build": "tsc -p ./tsconfig.build.json && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "npm run lint -- --fix",
@@ -16,9 +22,9 @@
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -42,11 +48,15 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "glob": "^10.4.2",
     "jsdom": "^24.1.0",
     "prettier": "3.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "storybook": "^8.1.11",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   }
 }
