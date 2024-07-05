@@ -4,24 +4,24 @@ run-name: Check Format for @${{ github.ref_name }}
 on: push
 
 jobs:
-    format-check:
-        name: Format Check
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+  format-check:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Install pnpm
-              uses: pnpm/action-setup@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
-            - name: Setup node
-              uses: actions/setup-node@v4
-              with:
-                cache: 'pnpm'
-                node-version-file: '.tool-versions'
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.tool-versions'
 
-            - name: Install dependencies
-              run: pnpm install --dev --ignore-scripts
+      - name: Install dependencies
+        run: pnpm install --dev --ignore-scripts
 
-            - name: Run lint
-              run: pnpm format
+      - name: Run lint
+        run: pnpm format

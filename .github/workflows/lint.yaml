@@ -4,27 +4,27 @@ run-name: Lint for @${{ github.ref_name }}
 on: push
 
 jobs:
-    lint:
-        name: Lint
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Install pnpm
-              uses: pnpm/action-setup@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
-            - name: Setup node
-              uses: actions/setup-node@v4
-              with:
-                cache: 'pnpm'
-                node-version-file: '.tool-versions'
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.tool-versions'
 
-            - name: Install dependencies
-              run: pnpm install --dev --ignore-scripts
+      - name: Install dependencies
+        run: pnpm install --dev --ignore-scripts
 
-            - name: Run lint
-              run: pnpm lint
+      - name: Run lint
+        run: pnpm lint
 
-            - name: Run typescript checks
-              run: tsc --noEmit
+      - name: Run typescript checks
+        run: tsc --noEmit
