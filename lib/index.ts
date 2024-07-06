@@ -1,2 +1,2 @@
-export { Dashboard } from './components/Dashboard'
-export { HelloWorld } from './components/HelloWorld'
+export { Dashboard } from './src/components/Dashboard'
+export { HelloWorld } from './src/components/HelloWorld'
