@@ -1,7 +1,7 @@
 {
   "name": "@danielroetzer/react-vite-lib-template",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": "Daniel Rötzer",
   "description": "React component library built with Vite and TypeScript",
   "homepage": "https://github.com/danielroetzer/react-vite-lib-template#readme",
