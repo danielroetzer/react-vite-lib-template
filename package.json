@@ -1,7 +1,18 @@
 {
-  "name": "react-vite-lib-template",
-  "private": true,
+  "name": "@danielroetzer/react-vite-lib-template",
+  "private": false,
   "version": "0.0.2",
+  "author": "Daniel Rötzer",
+  "description": "React component library built with Vite and TypeScript",
+  "homepage": "https://github.com/danielroetzer/react-vite-lib-template#readme",
+  "bugs": "https://github.com/danielroetzer/react-vite-lib-template/issues",
+  "repository": "github:danielroetzer/react-vite-lib-template",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "component library"
+  ],
   "type": "module",
   "exports": "./dist/index.js",
   "module": "./dist/index.js",
