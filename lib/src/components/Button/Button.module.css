@@ -1,0 +1,8 @@
+.button {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}

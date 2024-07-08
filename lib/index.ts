@@ -1,2 +1,2 @@
-export { Dashboard } from './src/components/Dashboard'
-export { HelloWorld } from './src/components/HelloWorld'
+export { Button } from './src/components/Button'
+export { Input } from './src/components/Input'
