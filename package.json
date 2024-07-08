@@ -34,7 +34,10 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "storybook:dev": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "changeset:add": "changeset add",
+    "changeset:status": "changeset status",
+    "release": "pnpm run build && changeset publish"
   },
   "peerDependencies": {
     "react": "^18.0.0",

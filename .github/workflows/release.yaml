@@ -30,7 +30,13 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --ignore-scripts
 
-      - name: Create Release Pull Request
+      # If a new changeset was added, a PR will be created with the appropriate version bump and changelog updates.
+      # If a push with a new package version is made, then a release will be triggered.
+      - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
+        with:
+          # You need to have a release script, which builds the library and then calls `changesets publish`.
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
