@@ -23,6 +23,6 @@
     /* Vitest */
     "types": ["vitest/globals", "@testing-library/jest-dom/vitest"]
   },
-  "include": ["lib"],
+  "include": ["app", "lib"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
